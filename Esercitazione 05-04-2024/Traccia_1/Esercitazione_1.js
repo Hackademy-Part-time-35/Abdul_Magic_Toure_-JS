@@ -1,5 +1,5 @@
 
-
+// Bene Abdul
 let num1 = prompt("Inseriesci il di num1: ");
 
 console.log(`Il valore di num1 è ${num1}`);
@@ -22,6 +22,7 @@ console.log(`Il valore di num5 è ${num5}`);
 
 let somma = parseInt(num1) + parseInt(num2) + parseInt(num3) + parseInt(num4) + parseInt(num5);
 
+// mi sfugge il motivo per cui hai usato toFixed()
 console.log(`La somma è uguale a ${somma.toFixed(3)}`);
 
 let media = parseInt(somma) / 5 ;
