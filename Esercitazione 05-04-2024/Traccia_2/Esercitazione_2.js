@@ -1,5 +1,5 @@
 
-
+// Ok benissimo
 let anno_corrente = prompt("Inserire l'anno corrente: ");
 
 console.log(`L'anno corrente è ${anno_corrente}`);
