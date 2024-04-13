@@ -1,5 +1,5 @@
 
-
+// Benissimo tutto OK
 let temperatura = parseInt(prompt("Inserisci la temperatura: "));
 
 

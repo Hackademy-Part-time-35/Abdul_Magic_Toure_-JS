@@ -1,5 +1,5 @@
 
-
+// Ottimo lavoro, vedo che hai usato un'alternativa nel legare insieme le condizioni OTTIMO
 let voto_numerico = parseInt(prompt("Inserisci il voto: "));
 
 

@@ -1,5 +1,5 @@
 
-
+// Benissimo, hai fatto bene a usare while che è un'ottima alternativa al for
 
 //Codice per la realizzazione di una tabellina in base al valore numero inserito dall'utente
 
