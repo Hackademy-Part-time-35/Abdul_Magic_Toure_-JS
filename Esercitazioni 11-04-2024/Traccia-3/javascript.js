@@ -3,45 +3,40 @@
 //Compilazione che permette ad un utente esterno di inserire un valore e scegliere la bevanda
 
 
+
 for (let c = 0; c < 1; c++) {
 
-    console.log("Ciclo iniziato");
+    let bevanda = parseInt(prompt("Inserisci un valore che vada da 1-3 per selezionare la tua bevanda: "));
 
-    
-    for (let c = 0; c < 1; c++) {
+    switch (bevanda) {
+        case 1:
 
-        let bevanda = parseInt(prompt("Inserisci un valore che vada da 1-3 per selezionare la tua bevanda: "));
+            console.log("E’ stata selezionata l’acqua");
+            c = 1;
 
-        switch (bevanda) {
-            case 1:
+            break;
 
-                console.log("E’ stata selezionata l’acqua");
-                c = 1;
+        case 2:
 
-                break;
+            console.log("E’ stata selezionata coca cola");
+            c = 1;
 
-            case 2:
+            break;
 
-                console.log("E’ stata selezionata coca cola");
-                c = 1;
+        case 3:
 
-                break;
+            console.log("E’ stata selezionata birra");
+            c = 1;
 
-            case 3:
+            break;
 
-                console.log("E’ stata selezionata birra");
-                c = 1;
+        default:
 
-                break;
+        c=-1;
 
-            default:
-
-            c=-1;
-
-                break;
-
-        }
+            break;
 
     }
+
 }
 console.log("Ciclo terminato");
