@@ -1,3 +1,5 @@
+// Bene Abdul, hai fatto bene anche a descrivere il tuo lavoro con i commenti, prosegu così
+
 let numero_totale_dei_gatti = parseInt(prompt("Inserisci il valore dei gatti totali: "));
 
 console.log(`Il numero totale di gatti è  ${numero_totale_dei_gatti}`);

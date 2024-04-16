@@ -1,4 +1,5 @@
 
+// Bravo!!
 
 // Compilazione per individuare quanti numeri pari e dispari vi siano tra un intervallo che va da 1-20
 let b = 0; 

@@ -1,4 +1,4 @@
-
+// Ok, mi piace la scelta del for
 
 //Compilazione che permette ad un utente esterno di inserire un valore e scegliere la bevanda
 
