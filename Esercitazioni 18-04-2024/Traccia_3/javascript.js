@@ -9,7 +9,7 @@ function incassi_one_by_one(N) {
 
         arr_incassi.push(val_incassi);
 
-        let iva = (N(i)*0.22);
+        let iva = (N[i]*0.22);
 
         console.log(iva);
 
