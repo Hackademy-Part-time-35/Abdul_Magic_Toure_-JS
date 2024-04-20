@@ -9,11 +9,11 @@ function incassi_one_by_one(N) {
 
         arr_incassi.push(val_incassi);
 
-        let iva = (N[i]*0.22);
+        let iva = val_incassi*(22/100);
 
         console.log(iva);
 
-        arr_iva.push(iva);
+        arr_iva.push(iva.toFixed(2));
 
     }
 }
