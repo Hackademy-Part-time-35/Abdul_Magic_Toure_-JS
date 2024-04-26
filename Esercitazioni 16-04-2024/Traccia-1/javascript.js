@@ -1,4 +1,4 @@
-
+// Ottimo lavoro
 
 // Realizzazione di una funziona che definisce il giocatore vincente in base alla somma dei punti ottenuti in base a "n" tiri.
 

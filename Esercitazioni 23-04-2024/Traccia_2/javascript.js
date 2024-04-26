@@ -1,4 +1,37 @@
+// Bene Abdul
+/* 
+Alcune osservazioni:
+1) il metodo mostra_singolo_contatto() accetta un parametro, ma nel codice del metodo questo non viene usato, dovrebbe essere scritto così:
+ mostra_singolo_contatto : function name(params) {
+    
+    console.log(agenda.contatti[params]);
 
+}
+
+2)
+hai creato questo metodo per aggiungere un contatto:
+
+aggiungere_un_nuovo_contatto: function (nome, telefono) {
+    agenda.contatti.push(nome);
+    agenda.contatti.push(telefono);
+    console.log(agenda.contatti[this.contatti.length - 1]);
+
+}
+
+il codice scritto aggiunge all'array contatti il parametro nome, DOPO aggiunge un altro elemento, cioè telefono
+
+usa nomi diversi per i parametri del metodo, altrimenti ti confondi:
+
+aggiungere_un_nuovo_contatto: function (nuovo_nome, nuovo_telefono) {
+    
+    agenda.contatti.push({nome: nome, telefono: telefono})
+    console.log(agenda.contatti[this.contatti.length - 1]);
+
+}
+
+l'inserimento del contatto deve avvenire simultaneamente:
+
+*/
 
 
 //Traccia 2 Esercizio da completare

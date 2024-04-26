@@ -1,4 +1,5 @@
-
+// bene
+// piccolo consiglio per una maggiore comprensione del codice, dichiara gli array che usi nella function, prima di dichiararre la funzione, così è più facile capire cosa la funzione esegue
 
 //Stesura di un codice che esegue l'iva di un array 
 
