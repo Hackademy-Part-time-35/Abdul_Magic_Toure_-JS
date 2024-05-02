@@ -1,4 +1,4 @@
-
+// bene
 
 // Stesura di un codice che permetta di inserire dei valori all'interno di un array ed eseguire la media di questi valori.
 
