@@ -1,5 +1,7 @@
 //1)cattura degli elmenti della pagina che verrano manipolati
 
+let card_contatti = document.querySelector("#card_contatti")
+
 let elenco_contatti = document.querySelector("#elenco_contatti");
 
 // cattura caselle di testo
@@ -7,6 +9,8 @@ let elenco_contatti = document.querySelector("#elenco_contatti");
 let nome_contatto = document.querySelector("#nome_contatto");
 
 let num_telefono = document.querySelector("#num_telefono");
+
+let email_contatto = document.querySelector("#email_contatto");
 
 let num_elimina_contatto = document.querySelector("#num_elimina_contatto");
 
@@ -18,15 +22,29 @@ let visualizza_agenda = document.querySelector("#visualizza_agenda");
 
 let elimina_contatto = document.querySelector("#elimina_contatto");
 
+let genera_card = document.querySelector("#genera_card");
+
 //Realizziamo l'oggetto
 
 let agenda = {
 
 contatti : [
 
-    {name: "Andrea", tel: "+39 333 786 45 23"},
-    {name: "MIchele", tel: "+39 333 289 67 34"},
-    {name: "Lucia", tel: "+39 345 270 60 60"},
+    {
+        name: 'Andrea',
+        tel: '+39 333 786 45 23',
+        mail: 'info@abc.it'
+        },
+        {
+        name: 'Michele',
+        tel: '+39 099 234 67 45',
+        mail: 'michele@anotnio.com'
+        },
+        {
+        name: 'Lucia',
+        tel: '+39 789 45 23',
+        mail: 'lucia@lucia.org'
+        }
 
 ],
 
@@ -40,7 +58,7 @@ visualizzaContatti : function () {
 
         par_contatto.innerHTML = `
         
-        Nome: <strong>${contatto.name}</strong> - Numero di telefono: <strong>${contatto.tel}</strong>
+        Nome: <strong>${contatto.name}</strong> - Numero di telefono: <strong>${contatto.tel}</strong> - Email : <strong>${card.mail}</strong>
 
         `;
 
@@ -52,7 +70,7 @@ visualizzaContatti : function () {
 
     aggiungi_contatto : function() {
 
-        let new_contatto = {name: nome_contatto.value, tel: num_telefono.value}
+        let new_contatto = {name: nome_contatto.value, tel: num_telefono.value, mail: email_contatto.value}
 
         this.contatti.push(new_contatto);
 
@@ -66,6 +84,28 @@ visualizzaContatti : function () {
         }
 
     },
+
+    genera_card : function () {
+
+    this.contatti.forEach((card) => {
+
+    let par_card = document.createElement("div");
+
+    par_card.innerHTML = `
+        
+    <div class="card mb-2">
+    <div class="card-body">
+    <strong>${card.name}</strong> - Numero di telefono: <strong>${card.tel}</strong> - Email : <strong>${card.mail}</strong>;
+    </div>
+  </div>
+
+    `;
+
+    card_contatti.appendChild(par_card);
+
+    })
+
+    }
 
 
 };
@@ -119,6 +159,16 @@ elimina_contatto.addEventListener("click",() => {
     controllo = 1;
 
     num_elimina_contatto.value = ""; 
+
+})
+
+genera_card.addEventListener("click", () => {
+
+
+ agenda.genera_card();
+
+ 
+
 
 })
 

@@ -14,12 +14,14 @@ let reset = document.querySelector("#reset");
 
 
 
-let j = 20; // tempo.value
+let j = 0; // tempo.value
 let a = 1;
 
 let conto_rovescia;
 
 start.addEventListener("click", () => {
+
+    j = tempo.value 
 
      conto_rovescia = setInterval(() => {
     

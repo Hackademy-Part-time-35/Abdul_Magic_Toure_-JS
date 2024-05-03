@@ -30,23 +30,36 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">email contatto</label>
+                    <input type="email" class="form-control" id="email_contatto" placeholder="inserisci la mail">
+                </div>
+
+                <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">posizione del contatto che si desidera eliminare</label>
                     <input type="number" class="form-control" id="num_elimina_contatto" placeholder="inserisci il numero della posizione del contatto">
                 </div>
 
             <div class="col-6 d-flex flex-column">
+
             <button id="aggiungi_contatto" class="btn btn-primary mb-2">Aggiungi contatto</button>
 
             <button id="visualizza_agenda" class="btn btn-info mb-2">Visualizza Agenda</button>
 
-            <button id="elimina_contatto" class="btn btn-danger">Elimina contatto</button>
+            <button id="elimina_contatto" class="btn btn-danger mb-2">Elimina contatto</button>
+
+            <button id="genera_card" class="btn btn-secondary">Genera Card</button>
+
             </div>
 
            
             <div id="elenco_contatti" class="col-12">
-
                 <p> </p>
             </div>
+
+            <div id="card_contatti" class="col-6 d-flex flex-column">
+                
+            </div>
+
 
         </div>
     </div>
