@@ -1,0 +1,49 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+:root {
+    --my-titolo: #F2B263;
+    --my_paragrafi: #3B4F8C;
+    --my-bg-primario:#f2a922
+    --my-bg-secondario: #609fa6
+    --my-color-white: #ffffff;
+    
+};
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+};
+
+p, ul {
+    font-family: "Open Sans", sans-serif;
+}
+
+/* ========================= Header ======================== */
+
+.my-dim-logo{
+    font-size: 3rem;
+}
+
+/* ========================= END Header ======================== */
+
+/* ========================= MAIN ======================== */
+.my-main {
+
+    display: flex;
+}
+/* ========================= END MAIN ======================== */
+
+/* ========================= Immagine background ======================== */
+.my-bg-img{
+
+height: 100vh;
+width: 100vw;
+filter: blur(8px);
+
+}
+/* ========================= Immagine background End ======================== */
