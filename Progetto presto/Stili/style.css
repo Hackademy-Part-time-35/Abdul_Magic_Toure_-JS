@@ -38,12 +38,19 @@ p, ul {
 }
 /* ========================= END MAIN ======================== */
 
-/* ========================= Immagine background ======================== */
-.my-bg-img{
+.my-logo {
 
-height: 100vh;
-width: 100vw;
-filter: blur(8px);
+height: auto;
+
+width: 9rem;
 
 }
-/* ========================= Immagine background End ======================== */
+
+.my-carousel {
+
+height: 80vh;
+
+width: auto;
+
+}
+
