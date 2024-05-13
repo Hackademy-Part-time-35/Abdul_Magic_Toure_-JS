@@ -54,3 +54,39 @@ width: auto;
 
 }
 
+/* ======================= CARD ================== */
+
+.mia-top-card {
+
+top: -2.5rem;
+
+}
+
+
+/* ======================= CARD END ================== */
+
+/* ======================= I nostri numeri ================== */
+
+#nostri_numeri h2 {
+
+color: #F2B263;
+font-size: 3rem;
+
+}
+
+#nostri_numeri p {
+
+    font-size: 1.8rem;
+    margin-left: 4rem;
+}
+
+#nostri_numeri span {
+
+font-size: 2.5rem;
+
+color: #3B4F8C;
+
+}
+
+/* ======================= I nostri numeri END ================== */
+
