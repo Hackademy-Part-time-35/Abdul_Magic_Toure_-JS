@@ -6,10 +6,11 @@
 
 
 :root {
-    --my-titolo: #F2B263;
-    --my_paragrafi: #3B4F8C;
-    --my-bg-primario:#f2a922
-    --my-bg-secondario: #609fa6
+    --my-titolo: #636373;
+    --my_paragrafi: #F2D544;
+    --my-bg-primario:#A62103;
+    --my-bg-secondario: #BF2424;
+    --my-bg-terziario: #262626;
     --my-color-white: #ffffff;
     
 };
@@ -17,11 +18,28 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", sans-serif;
+    color: var(--my-color-white);
 };
 
 p, ul {
     font-family: "Open Sans", sans-serif;
+    color: var(--my-color-white);
 }
+
+body {
+    display: flex;
+    background: url(/Immagini/pexels-asadphoto-3155666.jpg);
+
+}
+
+
+/* ========================= Bg Navbar ======================== */
+.my-navbar-bg {
+
+    background: var(--my-bg-terziario);
+
+}
+/* ========================= Bg Navbar END ======================== */
 
 /* ========================= Header ======================== */
 
