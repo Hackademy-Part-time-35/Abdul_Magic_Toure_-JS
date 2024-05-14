@@ -108,3 +108,10 @@ color: #3B4F8C;
 
 /* ======================= I nostri numeri END ================== */
 
+
+#my_radio_parent {
+
+background: var(--my-bg-secondario);
+
+}
+
