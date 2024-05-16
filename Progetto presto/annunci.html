@@ -59,11 +59,28 @@
         <!-- filtri -->
         <div id="my_radio_parent" class="col-3">
 
-          <div  class="d-flex flex-column">
-            seleziona la regione
-            <div id="contenitore_radio" class="d-flex row">
+          <h2>Filtra per regione</h2>
 
+          <!-- barra di ricerca per prezzo -->
+          <div>
+            <div class="input-group mb-3">
+              <input id="input_val_casa" type="number" class="form-control" placeholder="Valore Immobile" aria-label="Valore Immobile" aria-describedby="button-addon2">
+              <button class="btn btn-dark" type="button" id="button_val_casa">Cerca</button>
             </div>
+          </div>
+          <!--END barra di ricerca per prezzo -->
+          <!-- Contenitore radio button -->
+          <div  id="contenitore_radio">
+            
+
+            <div class="form-check">
+              <input checked class="form-check-input" type="radio" name="flexRadioDefault" id="all">
+              <label class="form-check-label" for="all">
+                Tutte le regioni
+              </label>
+            </div>
+
+            
           </div>
           
         </div>
