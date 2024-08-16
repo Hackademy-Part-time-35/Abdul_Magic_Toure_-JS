@@ -1,133 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Presto.it - La tua villa dei sogni la puoi trovare solo qui</title>
   
-  <!-- CCS bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   
-  <!-- My CSS -->
-  <link rel="stylesheet" href="./Stili/style.css">
+  <!-- Font icons Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- My style -->
+  <link rel="stylesheet" href="./Stili/Style.css">
+  
+  
 </head>
-
 <body>
   
-  
-  <div class="container-md">
-    
-    <header>
-      <!-- Nav Bar -->
-      <nav class="navbar navbar-expand-lg my-navbar-bg">
-        <div class="container-fluid">
-          <!-- Logo presto.it -->
-          
-          <a class="navbar-brand" href="./index.html">
-            <img class="my-logo" src="./Immagini/lgo_v2-removebg-preview.png" alt="">
-            <!-- <i class="fa-solid fa-house-flag my-dim-logo"></i> -->
-          </a>
-          <!-- Logo presto.it -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            
-            <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a style="color: white" class="nav-link active" aria-current="page" href="./index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a style="color: white" class="nav-link" href="#">Annunci</a>
-              </li>
-              <li class="nav-item">
-                <a style="color: white" class="nav-link" href="#">Chi siamo</a>
-              </li>
-            </ul>
-            
+  <div class="min-vh-100">
+    <div class="container-fluid text-center">
+      <header>
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-expand-lg my-navbar-bg sticky-top">
+          <div class="container">
+            <!-- Logo presto.it -->
+            <a class="navbar-brand" href="./index.html">
+              <img class="my-logo" src="./Immagini/lgo_v2-removebg-preview.png" alt="">
+            </a>
+            <!-- Logo presto.it -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item text-hover">
+                  <a style="color: #D4AF37" class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item text-hover">
+                  <a style="color: #D4AF37" class="nav-link" href="./annunci.html">Annunci</a>
+                </li>
+                <li class="nav-item text-hover">
+                  <a style="color: #D4AF37" class="nav-link" href="#">Chi siamo</a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
-      <!-- Nav Bar End -->
-    </header>
-    
-    <main>
+        </nav>
+        <!-- Nav Bar End -->
+      </header>
       
-      <div class="row">
-        <!-- filtri -->
-        <div id="my_radio_parent" class="col-3">
-
-          <h2>Filtra per regione</h2>
-
-          <!-- barra di ricerca per prezzo -->
-          <div>
-            <div class="input-group mb-3">
-              <input id="input_val_casa" type="number" class="form-control" placeholder="Valore Immobile" aria-label="Valore Immobile" aria-describedby="button-addon2">
-              <button class="btn btn-dark" type="button" id="button_val_casa">Cerca</button>
-            </div>
-          </div>
-          <!--END barra di ricerca per prezzo -->
-          <!-- Contenitore radio button -->
-          <div  id="contenitore_radio">
-            
-
-            <div class="form-check">
-              <input checked class="form-check-input" type="radio" name="flexRadioDefault" id="all">
-              <label class="form-check-label" for="all">
-                Tutte le regioni
-              </label>
-            </div>
-
-            
+      <main class="my-main justify-content-center align-items-center mt-4">
+        <div class="row">
+          <!-- Colonna principale con gli annunci -->
+          <div class="col-12">
+            <!-- Sezione superiore con il pulsante e il titolo -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3>Annunci Trovati: <span id="num_annunci"></span></h3>
+              <button id="filter-button" class="btn btn-dark">Filtra annunci</button>
           </div>
           
-        </div>
-        <!-- filtri END -->
-        
-        <!-- elenco annunci -->
-        
-        <div class="col-9">
-          
-          <div id="cont_annunci" class="row">
-            
-                      
-            <div class="col-4">
-              
-              <div class="card" >
-                <img src="https://picsum.photos/400/400" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  
-                </div>
+          <!-- Il pop-up del filtro -->
+          <div id="filter-popup" class="filter-popup p-3">
+              <h2>Filtra annunci</h2>
+              <!-- Contenuto del pop-up -->
+              <div class="input-group mb-3">
+                  <input id="input_val_casa" type="number" class="form-control" placeholder="Valore Immobile">
+                  <button class="btn btn-dark" type="button" id="button_val_casa">Cerca</button>
               </div>
-              
-            </div>
-            
-          </div>
           
+              <div id="filtra_regione">
+                  <div class="form-check">
+                      <input checked class="form-check-input" type="radio" name="sel_regioni" id="all">
+                      <label class="form-check-label" for="all">Tutte le regioni</label>
+                  </div>
+              </div>
+          </div>
+            <!-- Sezione con gli annunci -->
+            <div id="cont_annunci" class="row">
+              <!-- Qui appariranno gli annunci -->
+            </div>
+          </div>
         </div>
-
-        <!-- elenco annunci END -->
-      </div>
+      </main>
       
-    </main>
-    
-    
-    
-    
-    
-    
-    <!-- bootstrap js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-    <!-- Awesome font js -->
-    <script src="https://kit.fontawesome.com/055e9d9ef1.js" crossorigin="anonymous"></script>
-    <!-- My personale js -->
-    <script src="./js/annunci_js.js"></script>
-  </body>
+      <footer>
+        
+      </footer>
+    </div>
+  </div>
   
-  </html>
+  
+  <!-- LIbreria JS di Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+  <!-- my JS -->
+  <script src="./js/annunci.js"></script>
+</body>
+</html>
