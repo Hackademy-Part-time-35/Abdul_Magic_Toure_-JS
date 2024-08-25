@@ -12,7 +12,13 @@
 
 */
 let cont_annunci = document.querySelector('#cont_annunci');
-let filtra_regione = document.querySelector('#filtra_regione')
+let filtra_regione = document.querySelector('#filtra_regione');
+//cattura input per la ricerca delle case in base al valore
+let input_val_casa = document.querySelector("#input_val_casa");
+//cattura button per la ricerca delle case in base al valore
+let button_val_casa = document.querySelector("#button_val_casa");
+
+let num_annunci = document.querySelector("#num_annunci");
 
 fetch('./dati/elenco_immobili.json')
     .then(response => response.json())
@@ -20,6 +26,9 @@ fetch('./dati/elenco_immobili.json')
         
         function creaCardAnnunci(array_annunci) {
             cont_annunci.innerHTML = '';
+
+            num_annunci.textContent = array_annunci.length;
+
             array_annunci.forEach(annuncio => {
                 let colonna = document.createElement('div');
 
@@ -168,4 +177,62 @@ fetch('./dati/elenco_immobili.json')
         //console.log(mio_radio_button);
 
 
+        function filtraRegionePerPrezzo(val_casa) {
+
+            if (val_casa == 0 ) {
+        
+              creaCardAnnunci(data);
+        
+            } else {
+        
+              //Il metodo filter, ci permette di cercare un valore all'interno dell'array, indicando una condizione, qunado la condizione restituisce TRUE L'elemento corrispondente dell'array data viene aggiunto a un nuovo array che abbiamo chiamato annunci_filtrati
+            let annunci_filtrati = data.filter(annuncio => annuncio.prezzo <= val_casa );
+            creaCardAnnunci(annunci_filtrati);
+            console.log(annunci_filtrati);
+        
+            }
+        
+            
+        
+          }
+        
+          button_val_casa.addEventListener("click", () => {
+
+            let val_casa = input_val_casa.value;
+        
+            console.log(val_casa);
+        
+            filtraRegionePerPrezzo(val_casa);
+        
+          })
+
+          //l'evento input viene catturato ogni voltla che modifico il valore della casella di input, dunque mi esegue il filtraggio senza dover schiacciare il tasto usato sopra e rende un po più dinamica la pagina e rende il tutto più fluido.
+          input_val_casa.addEventListener("input",() => {
+
+            let val_casa = input_val_casa.value;
+        
+            console.log(val_casa);
+        
+            filtraRegionePerPrezzo(val_casa);
+
+          })
+
 })
+
+document.addEventListener("DOMContentLoaded", function() {
+    const filterButton = document.getElementById("filter-button");
+    const filterPopup = document.getElementById("filter-popup");
+
+    // Toggle the visibility of the popup when the filter button is clicked
+    filterButton.addEventListener("click", function() {
+        filterPopup.classList.toggle("active");
+    });
+
+    // Close the popup if clicked outside of it
+    document.addEventListener("click", function(event) {
+        // Check if the click is outside the popup and the filter button
+        if (!filterPopup.contains(event.target) && !filterButton.contains(event.target)) {
+            filterPopup.classList.remove("active");
+        }
+    });
+});
